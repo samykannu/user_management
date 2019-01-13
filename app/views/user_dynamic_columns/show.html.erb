@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= display_column_name(UserDynamicColumn, Meta key) %>:</strong>
+  <%= @user_dynamic_column.meta_key %>
+</p>
+
+<p>
+  <strong><%= display_column_name(UserDynamicColumn, Meta value) %>:</strong>
+  <%= @user_dynamic_column.meta_value %>
+</p>
+
+<p>
+  <strong><%= display_column_name(UserDynamicColumn, User) %>:</strong>
+  <%= @user_dynamic_column.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_user_dynamic_column_path(@user_dynamic_column) %> |
+<%= link_to 'Back', user_dynamic_columns_path %>

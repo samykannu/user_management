@@ -1,0 +1,9 @@
+<%% @<%= "#{name.underscore}_sensor_types" %>.in_groups_of(2) do |group| -%>
+  <div class="row">
+		<%% group.compact.each do |stemp| -%>
+		  <div class="col-md-6">
+			  <%%= link_to stemp, "/#{stemp.underscore.pluralize}?<%= name.underscore %>_id=#{@<%= name.underscore %>.id}", class: 'btn btn-sm btn-primary' %>
+			</div>
+		<%% end -%>
+  </div>
+<%% end -%>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User</title>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'admin', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'admin', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyAESfhghkmHGHrZDj4Pf4gHmhXTstMZmRw"></script>
+  </head>
+  <body  class="nav-md" style="background-color:#2A3F54 !important; ">
+		 <%= render 'layouts/admin_sidebar' %>
+		 <%= render 'layouts/footer' %>
+  </body>
+  <script>
+    $(document).ajaxStart(function(){
+        $("#loading").show();
+    });
+    $(document).ajaxStop(function(){
+        $("#loading").hide();
+    });
+  </script>
+</html>

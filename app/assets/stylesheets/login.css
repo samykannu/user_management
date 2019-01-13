@@ -1,0 +1,38 @@
+.login-bg {
+    background-color: #C6DAEA !important;
+    width: 100%;
+    height: 100%;
+}
+
+body.signin {
+    background-color: #428bca;
+}
+
+.panel-signin,
+.panel-signup {
+    margin: 80px auto 0 auto;
+}
+
+.panel-signin {
+    width: 400px;
+}
+
+.panel-signup {
+    width: 600px;
+}
+
+.panel-signin .panel-body,
+.panel-signup .panel-body {
+    padding: 40px;
+    padding-top: 0px;
+}
+
+.panel-signin .panel-footer,
+.panel-signup .panel-footer {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.mb15 {
+    margin-bottom: 15px;
+}

@@ -1,0 +1,888 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+
+ *= require bootstrap/dist/css/bootstrap
+ *= require font-awesome
+ */
+
+
+/* Overriding styles that are common across all pages */
+
+/* Google map was moving right issue fix */
+.dropdown-menu {
+	z-index: 2023 !important;
+}
+
+.ui-helper-hidden-accessible{
+  display: none;
+}
+/* Marker setup */
+.extra-marker {
+    background: url("/assets/img/markers_default.png") no-repeat 0 0;
+    width: 35px;
+    height: 46px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    text-align: center;
+}
+.extra-marker-shadow {
+    background: url("/assets/img/markers_shadow.png") no-repeat 0 0;
+    width: 36px;
+    height: 16px;
+}
+/* Retina displays */
+@media (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+    .extra-marker {
+        background-image: url("/assets/img/markers_default@2x.png");
+        background-size: 540px 184px;
+    }
+    .extra-marker-shadow {
+        background-image: url("/assets/img/markers_shadow@2x.png");
+        background-size: 35px 16px;
+    }
+}
+/* Icons */
+.extra-marker i {
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 14px;
+}
+/* Semantic UI Fix */
+.extra-marker i.icon {
+    margin-right: 0;
+    opacity: 1;
+}
+/* Sprites setup */
+.extra-marker-circle-red {
+    background-position: 0 0;
+}
+.extra-marker-circle-orange-dark {
+    background-position: -36px 0;
+}
+.extra-marker-circle-orange {
+    background-position: -72px 0;
+}
+.extra-marker-circle-yellow {
+    background-position: -108px 0;
+}
+.extra-marker-circle-blue-dark {
+    background-position: -144px 0;
+}
+.extra-marker-circle-blue {
+    background-position: -180px 0;
+}
+.extra-marker-circle-cyan {
+    background-position: -216px 0;
+}
+.extra-marker-circle-purple {
+    background-position: -252px 0;
+}
+.extra-marker-circle-violet {
+    background-position: -288px 0;
+}
+.extra-marker-circle-pink {
+    background-position: -324px 0;
+}
+.extra-marker-circle-green-dark {
+    background-position: -360px 0;
+}
+.extra-marker-circle-green {
+    background-position: -396px 0;
+}
+.extra-marker-circle-green-light {
+    background-position: -432px 0;
+}
+.extra-marker-circle-black {
+    background-position: -468px 0;
+}
+.extra-marker-circle-white {
+    background-position: -504px 0;
+}
+.extra-marker-square-red {
+    background-position: 0 -46px;
+}
+.extra-marker-square-orange-dark {
+    background-position: -36px -46px;
+}
+.extra-marker-square-orange {
+    background-position: -72px -46px;
+}
+.extra-marker-square-yellow {
+    background-position: -108px -46px;
+}
+.extra-marker-square-blue-dark {
+    background-position: -144px -46px;
+}
+.extra-marker-square-blue {
+    background-position: -180px -46px;
+}
+.extra-marker-square-cyan {
+    background-position: -216px -46px;
+}
+.extra-marker-square-purple {
+    background-position: -252px -46px;
+}
+.extra-marker-square-violet {
+    background-position: -288px -46px;
+}
+.extra-marker-square-pink {
+    background-position: -324px -46px;
+}
+.extra-marker-square-green-dark {
+    background-position: -360px -46px;
+}
+.extra-marker-square-green {
+    background-position: -396px -46px;
+}
+.extra-marker-square-green-light {
+    background-position: -432px -46px;
+}
+.extra-marker-square-black {
+    background-position: -468px -46px;
+}
+.extra-marker-square-white {
+    background-position: -504px -46px;
+}
+.extra-marker-star-red {
+    background-position: 0 -92px;
+}
+.extra-marker-star-orange-dark {
+    background-position: -36px -92px;
+}
+.extra-marker-star-orange {
+    background-position: -72px -92px;
+}
+.extra-marker-star-yellow {
+    background-position: -108px -92px;
+}
+.extra-marker-star-blue-dark {
+    background-position: -144px -92px;
+}
+.extra-marker-star-blue {
+    background-position: -180px -92px;
+}
+.extra-marker-star-cyan {
+    background-position: -216px -92px;
+}
+.extra-marker-star-purple {
+    background-position: -252px -92px;
+}
+.extra-marker-star-violet {
+    background-position: -288px -92px;
+}
+.extra-marker-star-pink {
+    background-position: -324px -92px;
+}
+.extra-marker-star-green-dark {
+    background-position: -360px -92px;
+}
+.extra-marker-star-green {
+    background-position: -396px -92px;
+}
+.extra-marker-star-green-light {
+    background-position: -432px -92px;
+}
+.extra-marker-star-black {
+    background-position: -468px -92px;
+}
+.extra-marker-star-white {
+    background-position: -504px -92px;
+}
+.extra-marker-penta-red {
+    background-position: 0 -138px;
+}
+.extra-marker-penta-orange-dark {
+    background-position: -36px -138px;
+}
+.extra-marker-penta-orange {
+    background-position: -72px -138px;
+}
+.extra-marker-penta-yellow {
+    background-position: -108px -138px;
+}
+.extra-marker-penta-blue-dark {
+    background-position: -144px -138px;
+}
+.extra-marker-penta-blue {
+    background-position: -180px -138px;
+}
+.extra-marker-penta-cyan {
+    background-position: -216px -138px;
+}
+.extra-marker-penta-purple {
+    background-position: -252px -138px;
+}
+.extra-marker-penta-violet {
+    background-position: -288px -138px;
+}
+.extra-marker-penta-pink {
+    background-position: -324px -138px;
+}
+.extra-marker-penta-green-dark {
+    background-position: -360px -138px;
+}
+.extra-marker-penta-green {
+    background-position: -396px -138px;
+}
+.extra-marker-penta-green-light {
+    background-position: -432px -138px;
+}
+.extra-marker-penta-black {
+    background-position: -468px -138px;
+}
+.extra-marker-penta-white {
+    background-position: -504px -138px;
+}
+.extra-marker .fa-number:before {
+    content: attr(number);
+}
+
+.ui-autocomplete {
+  padding-left: 0px !important;
+  mergin-left: 1px;
+  max-height: 375px!important;
+  overflow-y: auto;
+}
+
+.ui-menu-item {
+  padding: 2px 4px 2px 4px !important;
+  list-style-type: none !important;
+  cursor: pointer !important;
+}
+
+.ui-menu-item:hover {
+  background-color: black;
+  color: white;
+}
+
+.popup_content {
+    display: none;
+}
+
+.usn-marker-popup {
+    max-width: 431px;
+    max-height: 173px;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+div.modal-content .modal-body {
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.parsley-required {
+  padding-top: 3px;
+  color: red;
+}
+
+.formtastic li label {
+  padding-left: 0px;
+  text-align: left;
+  font-size: 100% !important;
+  display: block !important;
+  color: black !important;
+}
+
+.formtastic li {
+  list-style-type: none;
+  margin-bottom: 13px;
+}
+
+.formtastic li label abbr {
+  padding-left: 4px;
+}
+
+
+.leaflet-control-zoom {
+  margin-right: 85px !important;
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+.leaflet-control-layers {
+  top: -27px;
+}
+
+.leaflet-control-zoom-in {
+  margin-top: 44px;
+  background-color: #85A616 !important;
+  color: white !important;
+  border-radius: 9px 9px 0px 0px !important;
+  padding-top: 20px;
+  padding-bottom: 44px;
+}
+
+.leaflet-control-zoom-out {
+  background-color: #85A616 !important;
+  color: white !important;
+  border-radius: 0px 0px 9px 9px !important;
+  padding-bottom: 46px;
+  padding-top: 19px;
+  content: '|'
+}
+
+.leaflet-bar {
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.65) !important;
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 36px;
+  margin-right: 73px;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded {
+  margin-top: -160px;
+  padding-top: 6px !important;
+  padding-bottom: 0px !important;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded label {
+  cursor: pointer;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded label input {
+  display: none;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded label img.addBackgroundColor {
+  width: 38px;
+  margin-left: 0px;
+}
+
+.leaflet-control-layers.leaflet-control-layers-expanded label img {
+  width: 25px;
+  margin-left: 6px;
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.leaflet-top {
+  top: -22px;
+}
+
+.leaflet-control-zoomslider-wrap {
+  background: url("zoombar.png") no-repeat;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  margin-top: -2px;
+  border: none;
+  height: 152px !important;
+  margin-bottom: -12px;
+}
+
+.leaflet-control-zoomslider-wrap .leaflet-control-zoomslider-body {
+  background-color: transparent;
+  border: none;
+}
+
+.leaflet-control-zoomslider-in {
+  font: bold 18px 'Lucida Console', Monaco, monospace;
+  background: url("zoom-plus-mini.png");
+  padding-left: 0px;
+  right: 1px;
+  position: relative;
+}
+
+.leaflet-control-zoomslider-out {
+  font: bold 22px 'Lucida Console', Monaco, monospace;
+  background: url("zoom-minus-mini.png");
+  position: relative;
+  right: 1px;
+}
+
+.leaflet-control-zoomslider a, .leaflet-control-zoomslider a:hover {
+  width: 26px!important;
+  height: 26px!important;
+  text-align: center!important;
+  text-decoration: none!important;
+  color: white!important;
+  border: none!important;
+  display: block!important;
+  background-color: transparent!important;
+}
+
+.leaflet-control-zoomslider-knob {
+  background: url("slider.png") no-repeat;
+  padding: 9px;
+  border: none;
+  margin-left: -9px;
+}
+
+.leaflet-control-layers.leaflet-control:not(.leaflet-control-layers-expanded) {
+  display: none;
+}
+
+/*********** Directions Form ****************/
+.directions-form {
+  position: absolute;
+  z-index: 1001;
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-top: 10px;
+  margin-left: 10px;
+  color: #000;
+  padding: 5px 9px;
+  top: 5px;
+
+}
+
+@media (max-width: 542px){
+  .directions-form{
+    margin-left: 0px;
+    top: 175px;
+  }
+  input#dir-source.default_text.faded_text.ui-autocomplete-input{
+    width: 220px;
+    padding: 4px;
+  }
+  input#dir-destination.default_text.faded_text.ui-autocomplete-input{
+    width: 220px;
+    padding: 4px;
+  }
+  input#get-directions.submit-directions{
+    width: 220px;
+  }
+  div.widget_content div.nested-content{
+    width: 225px;
+  }
+  ul#last_child{
+    float: left!important;
+  }
+  div.widget_content div.nested-content ul.listing{
+    width: 220px;
+  }
+}
+
+.directions-form .go {
+  cursor: pointer;
+  height: 32px;
+  margin-left: 9px;
+  margin-top: 2px;
+  margin-right: 0px;
+}
+
+.form-input-size{
+  border-radius: 0px;
+  padding:5px;
+}
+
+.stretch-container {
+  display: table;
+}
+
+.stretch-item input {
+  font-size: 8pt;
+  width: 300px;
+  padding: 5px 0;
+}
+
+.stretch-item {
+  padding: 5px;
+}
+
+.directions-form input {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+}
+
+.stretch-item .submit-directions {
+  font-weight: bold;
+  font-size: 8pt;
+  background-color: #353535;
+  color: #fff;
+  text-align: center;
+  width: 300px;
+  padding: 5px 0;
+}
+
+.leaflet-routing-container {
+  left: -3%;
+  top: 136px;
+  margin-top:0px !important;
+}
+
+ul.ui-autocomplete
+{
+  position: absolute;
+  z-index: 3001 !important;
+  background: #fff;
+}
+
+#leaflet-directions {
+  position: absolute;
+  border: 1px solid #ddd;
+  top: 120px !important;
+  left: 0px !important;
+  z-index:2001;
+  background:#fff;
+  padding:0px;
+  margin-top:10px;
+  margin-left:10px;
+  color:#000;
+  display:none;
+  max-height: 460px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+}
+
+#leaflet-directions .leaflet-routing-container {
+  padding: 0px;
+}
+#leaflet-directions .leaflet-routing-alt:not(.leaflet-routing-alt-minimized) table tbody{
+  max-height: 352px!important;
+}
+
+.directions-form .reverse {
+  cursor: pointer;
+  width:25px;
+  height: 25px;
+  margin-left: 31px;
+  display: none;
+}
+
+.directions-form input {
+  color: black;
+  font-size: 13px;
+}
+
+.directions-form {
+  background-color: #B3B3B3 !important;
+  padding: 8px 10px 0px 10px !important;
+}
+
+
+.collapse_list.colapse1 {
+  float: right;
+  right: 38px;
+  font-size: 24px;
+  position: relative;
+  top: 5px !important;
+  cursor: pointer;
+  margin-right: -35px;
+}
+
+.collapse_list.expand {
+  float: right;
+  right: 0px;
+  font-size: 24px;
+  position: relative;
+  top: 0px !important;
+  cursor: pointer;
+  margin-right: 1px;
+  margin-bottom: 9px;
+}
+
+
+.leaflet-routing-alt {
+  background-color: #FFDF00;
+  padding: 10px;
+}
+
+.leaflet-routing-alt table {
+  background-color: white;
+}
+
+.leaflet-routing-alt table td{
+  padding: 4px;
+}
+
+.leaflet-routing-alt-minimized {
+  background-color: #FFDF00;
+  color: black;
+}
+
+.leaflet-routing-icon {
+  background-image: url('/assets/leaflet.routing.icons.png') !important;
+}
+
+.summery h2{
+  line-height: 1.5;
+  margin-top: 5px;
+}
+
+.leaflet-routing-alt::-webkit-scrollbar {
+  width: 0px !important;
+}
+
+.leaflet-routing-alt, .leaflet-routing-geocoders, .leaflet-routing-error {
+  max-height: none;
+  overflow-y: scroll;
+}
+
+.leaflet-routing-alt:not(.leaflet-routing-alt-minimized) table tbody {
+  display: block;
+  max-height: 250px;
+  overflow-y: scroll;
+}
+
+.leaflet-routing-alt.leaflet-routing-alt-minimized table tbody {
+  display: none;
+}
+
+.leaflet-routing-alt table tr:nth-child(odd) {
+  background-color: #E8E5E5;
+}
+
+.leaflet-routing-alt table tr:nth-child(even) {
+  background-color: #FFF;
+}
+
+#leaflet-directions .leaflet-routing-alt .summery{
+  padding-left: 10px!important;
+  padding-right: 10px!important;
+}
+div#leaflet-directions.mapID-show-col-12 .leaflet-routing-alt:not(.leaflet-routing-alt-minimized) table tbody{
+  max-height: 197px!important;
+}
+#leaflet-directions .leaflet-routing-alt:not(.leaflet-routing-alt-minimized) table tbody tr{
+  vertical-align: top!important;
+}
+#leaflet-directions .leaflet-routing-alt:not(.leaflet-routing-alt-minimized) table tbody tr td{
+  padding-top: 4px!important;
+}
+#leaflet-directions .leaflet-routing-alt table tr td:first-child{
+  padding-top:5px!important;
+}
+#leaflet-directions .leaflet-routing-alt table tr td:last-child{
+  width: 21%!important;
+}
+#leaflet-directions .leaflet-routing-alt table tr {
+  margin-top: 10px!important;
+}
+div#leaflet-directions.mapID-show-col-12{
+  position: inherit!important;
+  border: none!important;
+  top: 0px !important;
+  /* left: 0px !important; */
+  z-index: 1001!important;
+  /* background: #fff; */
+  padding: 0!important;
+  margin-top: 0px!important;
+  margin-left: 0px!important;
+  /* color: #000; */
+  height: 305px!important;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+#leaflet-directions .leaflet-routing-alt {
+  margin: 0px !important;
+  padding: 10px 0px!important;
+}
+
+ul.list li {
+  line-height: 2;
+  padding: 0 5px;
+  list-style-type: none;
+}
+
+ul.list {
+  padding: 0px;
+  overflow-y: auto;
+  max-height: 361px;
+  height: 361px;
+}
+
+ul.list li a {
+  color: black;
+}
+
+.odd {
+  background-color: #E8E5E5;
+}
+
+.even {
+  background-color: #FFF;
+}
+
+.marker-cluster-small {
+   background-color: rgba(168, 98, 181, 0.6);
+}
+.marker-cluster-small div {
+   background-color: rgba(168, 98, 181, 0.6);
+}
+
+@media (max-width:2100px){
+	@-moz-document url-prefix() {
+		.leaflet-control-zoomslider-wrap{
+			margin-left: 0px!important;
+		}
+	}
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 1px;
+	}
+}
+@media (max-width:1920px){
+	@-moz-document url-prefix() {
+		.leaflet-control-zoomslider-wrap{
+			margin-left: 0px!important;
+		}
+	}
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 0px;
+    margin-bottom: -13px;
+	}
+}
+@media (max-width:1666px){
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 1px;
+    margin-bottom: -13px;
+	}
+}
+@media (max-width:1366px){
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 0px;
+	}
+}
+@media (max-width:1280px){
+	@-moz-document url-prefix() {
+		.leaflet-control-zoomslider-wrap{
+			margin-left: 0px!important;
+		}
+	}
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 1px;
+	}
+}
+@media (max-width:1152px){
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 0.5px;
+    margin-bottom: -13px;
+	}
+}
+@media (max-width:900px){
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 0px;
+	}
+}
+@media (max-width:800px){
+	@-moz-document url-prefix() {
+		.leaflet-control-zoomslider-wrap{
+			margin-left: 0px!important;
+		}
+	}
+	.leaflet-control-zoomslider-wrap{
+		margin-left: .5px;
+	}
+}
+@media (max-width:700px){
+	.leaflet-control-zoomslider-wrap{
+		margin-left: 0px!important;
+	}
+}
+.cluster-green {
+  background-color: rgba(169, 224, 151, 0.96)
+}
+
+.cluster-green div{
+  background-color: rgb(94, 202, 87)
+}
+
+ul.typeahead.dropdown-menu {
+  max-height: 200px !important;
+  overflow-y: auto;
+}
+
+/*********** Vehicle Ownership Page *******************/
+
+table.vehicle-ownership {
+  list-style-type: none;
+}
+
+table.vehicle-ownership tr {
+  font-size: 15px;
+  margin: 0px 0px 10px 0px;
+}
+
+table.vehicle-ownership input#rto_number {
+  text-transform: uppercase;
+  width: 76%;
+}
+
+table.vehicle-ownership-form {
+  border: 2px solid #DDD;
+  // margin-top: 10px;
+}
+
+table.vehicle-ownership-form tr td {
+  border: none;
+}
+
+.simple_captcha .simple_captcha_image {
+  display: inline;
+  border: none !important;
+  margin-right: 5px;
+}
+
+.simple_captcha .simple_captcha_field {
+  display: inline;
+  border: none !important;
+}
+
+.simple_captcha .simple_captcha_field input {
+  background-color: #FFF !important;
+  border: 1px solid #CACACA !important;
+  text-transform: uppercase;
+}
+
+.simple_captcha .simple_captcha_refresh_button A {
+  font-size: 10px;
+  margin-left: 15px;
+}
+
+.simple_captcha .simple_captcha_refresh_button A:after {
+  content: ' Image';
+}
+.alert{
+  z-index: 10000;
+  position: absolute;
+  width: 30%;
+  left: 35%;
+  text-align: center;
+  color: white;
+  background-color: #85a616;
+  border-color: #85a616;
+}
+#loading {
+	width: auto;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 3001;
+}
+#loading img{
+	height: 100px;
+}
+/*********** Footer **********************/
+.footer-logo{
+	font-size: 11pt;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+#errors{
+  display:none;
+  color:red!important;
+  padding:0!important;
+  margin-bottom:10px;
+}

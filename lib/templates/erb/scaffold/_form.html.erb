@@ -1,0 +1,65 @@
+<%%= form_for(<%= singular_table_name %>) do |f| %>
+  <%% if <%= singular_table_name %>.errors.any? %>
+    <div id="error_explanation">
+      <h2><%%= pluralize(<%= singular_table_name %>.errors.count, "error") %> prohibited this <%= singular_table_name %> from being saved:</h2>
+
+      <ul>
+      <%% <%= singular_table_name %>.errors.full_messages.each do |message| %>
+        <li><%%= message %></li>
+      <%% end %>
+      </ul>
+    </div>
+  <%% end %>
+
+  <% attributes.in_groups_of(2).each do |grp_attribute| -%>
+    <div class="row">
+      <% grp_attribute.compact.each do |attribute| -%>
+
+        <div class="col-md-6" style="<%= attribute.field_type.to_s == "date_select" ? "position: relative;" : "" %>">
+          <% if attribute.password_digest? -%>
+              <%%= f.label :password %>
+              <%%= f.password_field :password, class: "form-control" %>
+            </div>
+
+            <div class="field">
+              <%%= f.label :password_confirmation %>
+              <%%= f.password_field :password_confirmation, class: "form-control" %>
+          <% elsif attribute.reference? -%>
+              <label><%%= ColumnDetail.display_column_name("<%= singular_table_name.classify %>", "<%= attribute.name %>") %></label>
+              <%%= f.collection_select :<%= attribute.column_name %>, <%= attribute.name.camelize %>.all, :id, :name, {prompt: true}, {class: "form-control"}  %>
+          <% elsif attribute.field_type.to_s == "date_select" -%>
+            <label><%%= ColumnDetail.display_column_name("<%= singular_table_name.classify %>", "<%= attribute.name %>") %></label>
+            <%%= f.<%= attribute.field_type.to_s == "date_select" ? :text_field : attribute.field_type %> :<%= attribute.column_name %>, class: "form-control" %>
+          <% else -%>
+              <label><%%= ColumnDetail.display_column_name("<%= singular_table_name.classify %>", "<%= attribute.name %>") %></label>
+              <%%= f.<%= attribute.field_type.to_s == "date_select" ? :text_field : attribute.field_type %> :<%= attribute.column_name %>, class: "form-control" %>
+          <% end -%>
+        </div>
+
+      <% end -%>
+    </div>  
+  <% end -%>
+  <br/>
+  <div class="row">
+    <div class="col-md-6">
+      <%% if <%= singular_table_name %>.new_record? %>
+        <%%= f.button 'Create', class: "btn btn-success" %>
+      <%% else %>
+        <%%= f.button 'Update', class: "btn btn-success" %>
+      <%% end %>
+    </div>
+  </div>
+<%% end %>
+
+<script>
+  $(document).ready(function () {
+    <% attributes.each do |attribute| -%>
+      <% if attribute.field_type.to_s == "date_select" -%>
+        $("#<%= singular_table_name %>_<%= attribute.column_name %>").datetimepicker({
+          format: 'YYYY-MM-DD',
+          sideBySide: true
+        });
+      <% end -%>
+    <% end -%>
+  });
+</script>

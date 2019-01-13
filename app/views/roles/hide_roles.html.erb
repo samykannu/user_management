@@ -1,0 +1,22 @@
+<table class="table table-striped table-bordered table-hover" id="roles_table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Status</th>
+      <th>Update Status</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= form_for :role, url: post_hide_roles_roles_path do |f| %>
+      <% @roles.each do |role| %>
+        <tr>
+          <td><%= role.name %></td>
+          <td><%= role.status %></td>
+          <td><%= check_box 'role', 'status', {index: role.id}, 1 , 0 %></td> 
+        </tr>
+      <% end %>
+      <%= submit_tag "Submit", class: "btn btn-success" %>
+    <% end %>  
+  </tbody>
+</table>
